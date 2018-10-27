@@ -1,0 +1,9 @@
+
+getMapData returns the map’s data
+Description
+returns the map’s data
+Usage
+getMapData(map)
+Arguments
+map the map
+34 iconList
