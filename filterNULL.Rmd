@@ -1,0 +1,17 @@
+filterNULL remove NULL elements from a list
+Description
+remove NULL elements from a list
+Usage
+filterNULL(x)
+Arguments
+x A list whose NULL elements will be filtered
+gadmCHE 33
+gadmCHE Administrative borders of Switzerland (level 1)
+Description
+Administrative borders of Switzerland (level 1)
+Format
+sp::SpatialPolygonsDataFrame
+Details
+This dataset comes from http://gadm.org. It was downloaded using getData.
+Source
+http://gadm.org
