@@ -1,0 +1,57 @@
+
+makeAwesomeIcon Make Awesome Icon
+Description
+Make Awesome Icon
+### Usage
+makeAwesomeIcon(icon = "home", library = "glyphicon",
+markerColor = "blue", iconColor = "white", spin = FALSE,
+extraClasses = NULL, squareMarker = FALSE, iconRotate = 0,
+fontFamily = "monospace", text = NULL)
+### Arguments
+icon Name of the icon
+library Which icon library. Default "glyphicon", other possible values are "fa" (fontawesome)
+or "ion" (ionicons).
+markerColor Possible values are "red", "darkred", "lightred", "orange", "beige", "green",
+"darkgreen", "lightgreen", "blue", "darkblue", "lightblue", "purple",
+"darkpurple", "pink", "cadetblue", "white", "gray", "lightgray", "black"
+iconColor The color to use for the icon itself. Use any CSS-valid color (hex, rgba, etc.) or
+a named web color.
+spin If TRUE, make the icon spin (only works when library = "fa")
+extraClasses Additional css classes to include on the icon.
+squareMarker Whether to use a square marker.
+iconRotate Rotate the icon by a given angle.
+fontFamily Used when text option is specified.
+text Use this text string instead of an icon. argument of addAwesomeMarkers().
+makeIcon Define icon sets
+Description
+Define icon sets
+### Usage
+makeIcon(iconUrl = NULL, iconRetinaUrl = NULL, iconWidth = NULL,
+iconHeight = NULL, iconAnchorX = NULL, iconAnchorY = NULL,
+shadowUrl = NULL, shadowRetinaUrl = NULL, shadowWidth = NULL,
+shadowHeight = NULL, shadowAnchorX = NULL, shadowAnchorY = NULL,
+popupAnchorX = NULL, popupAnchorY = NULL, className = NULL)
+mapOptions 47
+### Arguments
+iconUrl the URL or file path to the icon image
+iconRetinaUrl the URL or file path to a retina sized version of the icon image
+iconWidth size of the icon image in pixels
+iconHeight size of the icon image in pixels
+iconAnchorX the coordinates of the "tip" of the icon (relative to its top left corner, i.e. the top
+left corner means iconAnchorX = 0 and iconAnchorY = 0), and the icon will
+be aligned so that this point is at the marker’s geographical location
+iconAnchorY the coordinates of the "tip" of the icon (relative to its top left corner, i.e. the top
+left corner means iconAnchorX = 0 and iconAnchorY = 0), and the icon will
+be aligned so that this point is at the marker’s geographical location
+shadowUrl the URL or file path to the icon shadow image
+shadowRetinaUrl
+the URL or file path to the retina sized version of the icon shadow image
+shadowWidth size of the shadow image in pixels
+shadowHeight size of the shadow image in pixels
+shadowAnchorX the coordinates of the "tip" of the shadow
+shadowAnchorY the coordinates of the "tip" of the shadow
+popupAnchorX the coordinates of the point from which popups will "open", relative to the icon
+anchor
+popupAnchorY the coordinates of the point from which popups will "open", relative to the icon
+anchor
+className a custom class name to assign to both icon and shadow images
