@@ -1,0 +1,142 @@
+
+setView Methods to manipulate the map widget
+Description
+A series of methods to manipulate the map.
+### Usage
+setView(map, lng, lat, zoom, options = list())
+flyTo(map, lng, lat, zoom, options = list())
+fitBounds(map, lng1, lat1, lng2, lat2, options = list())
+flyToBounds(map, lng1, lat1, lng2, lat2, options = list())
+setMaxBounds(map, lng1, lat1, lng2, lat2)
+clearBounds(map)
+### Arguments
+map a map widget object created from leaflet()
+lng The longitude of the map center
+lat The latitude of the map center
+zoom the zoom level
+options a list of zoom/pan options (see http://leafletjs.com/reference-1.3.1.
+html#zoom/pan-options)
+lng1, lat1, lng2, lat2
+the coordinates of the map bounds
+Value
+The modified map widget.
+Functions
+• setView: Set the view of the map (center and zoom level)
+• flyTo: Flys to a given location/zoom-level using smooth pan-zoom.
+• fitBounds: Set the bounds of a map
+• flyToBounds: Flys to given bound using smooth pan/zoom.
+52 showGroup
+• setMaxBounds: Restricts the map view to the given bounds
+• clearBounds: Clear the bounds of a map, and the bounds will be automatically determined
+from latitudes and longitudes of the map elements if available (otherwise the full world view
+is used)
+References
+http://leafletjs.com/reference-1.3.1.html#map-methods-for-modifying-map-state
+### Examples
+m <- leaflet() %>% addTiles() %>% setView(-71.0382679, 42.3489054, zoom = 18)
+m # the RStudio 'headquarter'
+m %>% fitBounds(-72, 40, -70, 43)
+m %>% clearBounds() # world view
+showGroup Show or hide layer groups
+Description
+Hide groups of layers without removing them from the map entirely. Groups are created using the
+group parameter that is included on most layer adding functions.
+### Usage
+showGroup(map, group)
+hideGroup(map, group)
+### Arguments
+map the map to modify
+group character vector of one or more group names to show or hide
+See Also
+addLayersControl to allow users to show/hide layer groups interactively
+tileOptions 53
+tileOptions Extra options for map elements and layers
+Description
+The rest of all possible options for map elements and layers that are not listed in the layer functions.
+### Usage
+tileOptions(minZoom = 0, maxZoom = 18, maxNativeZoom = NULL,
+tileSize = 256, subdomains = "abc", errorTileUrl = "",
+tms = FALSE, noWrap = FALSE, zoomOffset = 0, zoomReverse = FALSE,
+opacity = 1, zIndex = 1, unloadInvisibleTiles = NULL,
+updateWhenIdle = NULL, detectRetina = FALSE, ...)
+WMSTileOptions(styles = "", format = "image/jpeg",
+transparent = FALSE, version = "1.1.1", crs = NULL, ...)
+popupOptions(maxWidth = 300, minWidth = 50, maxHeight = NULL,
+autoPan = TRUE, keepInView = FALSE, closeButton = TRUE,
+zoomAnimation = NULL, closeOnClick = NULL, className = "", ...)
+labelOptions(interactive = FALSE, clickable = NULL, noHide = NULL,
+permanent = FALSE, className = "", direction = "auto",
+offset = c(0, 0), opacity = 1, textsize = "10px",
+textOnly = FALSE, style = NULL, zoomAnimation = NULL,
+sticky = TRUE, ...)
+markerOptions(interactive = TRUE, clickable = NULL,
+draggable = FALSE, keyboard = TRUE, title = "", alt = "",
+zIndexOffset = 0, opacity = 1, riseOnHover = FALSE,
+riseOffset = 250, ...)
+markerClusterOptions(showCoverageOnHover = TRUE,
+zoomToBoundsOnClick = TRUE, spiderfyOnMaxZoom = TRUE,
+removeOutsideVisibleBounds = TRUE,
+spiderLegPolylineOptions = list(weight = 1.5, color = "#222", opacity =
+0.5), freezeAtZoom = FALSE, ...)
+pathOptions(lineCap = NULL, lineJoin = NULL, clickable = NULL,
+interactive = TRUE, pointerEvents = NULL, className = "", ...)
+### Arguments
+minZoom, maxZoom, maxNativeZoom, tileSize, subdomains, errorTileUrl, tms, noWrap, zoomOffset, zoomReverse, the tile layer options; see http://leafletjs.com/reference-1.3.1.html#
+tilelayer
+54 tileOptions
+opacity Tooltip container opacity. Ranges from 0 to 1. Default value is 1 (different from
+leaflet.js 0.9); see http://leafletjs.com/reference-1.3.1.html#tooltip-opacity
+... extra options passed to underlying Javascript object constructor.
+styles comma-separated list of WMS styles
+format WMS image format (use "image/png" for layers with transparency)
+transparent if TRUE, the WMS service will return images with transparency
+version version of the WMS service to use
+crs Coordinate Reference System to use for the WMS requests, defaults.
+maxWidth, minWidth, maxHeight, autoPan, keepInView, closeButton, closeOnClick
+popup options; see http://leafletjs.com/reference-1.3.1.html#popup-option
+zoomAnimation deprecated. See https://github.com/Leaflet/Leaflet/blob/master/CHANGELOG.
+md#api-changes-5
+className a CSS class name set on an element
+interactive whether the element emits mouse events
+clickable DEPRECATED! Use the interactive option.
+noHide, direction, offset, permanent
+label options; see http://leafletjs.com/reference-1.3.1.html#tooltip-option
+textsize Change the text size of a single tooltip
+textOnly Display only the text, no regular surrounding box.
+style list of css style to be added to the tooltip
+sticky If true, the tooltip will follow the mouse instead of being fixed at the feature
+center. Default value is TRUE (different from leaflet.js FALSE); see http:
+//leafletjs.com/reference-1.3.1.html#tooltip-sticky
+draggable, keyboard, title, alt, zIndexOffset, riseOnHover, riseOffset
+marker options; see http://leafletjs.com/reference-1.3.1.html#marker-option
+showCoverageOnHover
+when you mouse over a cluster it shows the bounds of its markers
+zoomToBoundsOnClick
+when you click a cluster we zoom to its bounds
+spiderfyOnMaxZoom
+when you click a cluster at the bottom zoom level we spiderfy it so you can see
+all of its markers
+removeOutsideVisibleBounds
+clusters and markers too far from the viewport are removed from the map for
+performance
+spiderLegPolylineOptions
+Allows you to specify PolylineOptions (http://leafletjs.com/reference-1.
+3.1.html#polyline-option) to style spider legs. By default, they are weight:
+1.5, color: "#222", opacity: 0.5
+freezeAtZoom Allows you to freeze cluster expansion to a zoom level. Can be a zoom level e.g.
+10, 12 or "max" or "maxKeepSpiderify" See https://github.com/ghybs/
+Leaflet.MarkerCluster.Freezable#api-reference
+lineCap a string that defines shape to be used at the end of the stroke
+lineJoin a string that defines shape to be used at the corners of the stroke
+pointerEvents sets the pointer-events attribute on the path if SVG backend is used
+validateCoords 55
+Functions
+• tileOptions: Options for tile layers
+• WMSTileOptions: Options for WMS tile layers
+• popupOptions: Options for popups
+• labelOptions: Options for labels
+• markerOptions: Options for markers
+• markerClusterOptions: Options for marker clusters
+• pathOptions: Options for vector layers (polylines, polygons, rectangles, and circles, etc)
+See Also
+leafletCRS to map CRS (don’t change this if you’re not sure what it means)
