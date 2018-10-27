@@ -1,0 +1,62 @@
+
+addGraticule Add a Graticule on the map see https://github.com/turban/
+Leaflet.Graticule
+Description
+Add a Graticule on the map see https://github.com/turban/Leaflet.Graticule
+### Usage
+addGraticule(map, interval = 20, sphere = FALSE, style = list(color =
+"#333", weight = 1), layerId = NULL, group = NULL,
+options = pathOptions(pointerEvents = "none", clickable = FALSE))
+addLayersControl 9
+### Arguments
+map a map widget object
+interval The spacing in map units between horizontal and vertical lines.
+sphere boolean. Default FALSE
+style path options for the generated lines. See http://leafletjs.com/reference-1.
+3.1.html#path-option
+layerId the layer id
+group the name of the group this layer belongs to.
+options the path options for the graticule layer
+### Examples
+leaf <- leaflet() %>%
+addTiles() %>%
+addGraticule()
+leaf
+addLayersControl Add UI controls to switch layers on and off
+Description
+Uses Leaflet’s built-in layers control feature to allow users to choose one of several base layers, and
+to choose any number of overlay layers to view.
+### Usage
+addLayersControl(map, baseGroups = character(0),
+overlayGroups = character(0), position = c("topright", "bottomright",
+"bottomleft", "topleft"), options = layersControlOptions(),
+data = getMapData(map))
+layersControlOptions(collapsed = TRUE, autoZIndex = TRUE, ...)
+removeLayersControl(map)
+### Arguments
+map the map to add the layers control to
+baseGroups character vector where each element is the name of a group. The user will be
+able to choose one base group (only) at a time. This is most commonly used for
+mostly-opaque tile layers.
+overlayGroups character vector where each element is the name of a group. The user can turn
+each overlay group on or off independently.
+10 addLegend
+position position of control: "topleft", "topright", "bottomleft", or "bottomright"
+options a list of additional options, intended to be provided by a call to layersControlOptions
+data the data object from which the argument values are derived; by default, it is the
+data object provided to leaflet() initially, but can be overridden
+collapsed if TRUE (the default), the layers control will be rendered as an icon that expands
+when hovered over. Set to FALSE to have the layers control always appear in its
+expanded state.
+autoZIndex if TRUE, the control will automatically maintain the z-order of its various groups
+as overlays are switched on and off.
+... other options for layersControlOptions()
+### Examples
+leaflet() %>%
+addTiles(group = "OpenStreetMap") %>%
+addProviderTiles("Stamen.Toner", group = "Toner by Stamen") %>%
+addMarkers(runif(20, -75, -74), runif(20, 41, 42), group = "Markers") %>%
+addLayersControl(
+baseGroups = c("OpenStreetMap", "Toner by Stamen"),
+overlayGroups = c("Markers")
+)
