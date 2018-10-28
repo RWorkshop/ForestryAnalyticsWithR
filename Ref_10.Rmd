@@ -1,24 +1,5 @@
 
-atlStorms2005 Atlantic Ocean storms 2005
-Description
-Atlantic Ocean storms 2005
-Format
-sp::SpatialLinesDataFrame
-Details
-This dataset contains storm tracks for selected storms in the Atlantic Ocean basin for the year 2005
-awesomeIconList 23
-awesomeIconList Make awesome-icon set
-Description
-Make awesome-icon set
-### Usage
-awesomeIconList(...)
-### Arguments
-... icons created from makeAwesomeIcon()
-### Examples
-iconSet <- awesomeIconList(
-home = makeAwesomeIcon(icon = "Home", library = "fa"),
-flag = makeAwesomeIcon(icon = "Flag", library = "fa")
-)
+
 iconSet[c("home", "flag")]
 awesomeIcons Create a list of awesome icon data see https://github.com/
 lvoogdt/Leaflet.awesome-markers
@@ -49,16 +30,8 @@ fontFamily Used when text option is specified.
 text Use this text string instead of an icon. argument of addAwesomeMarkers().
 Value
 A list of awesome-icon data that can be passed to the icon
-breweries91 Selected breweries in Franconia
-Description
-Selected breweries in Franconia (zip code starting with 91...)
-Format
-sp::SpatialPointsDataFrame
-Details
-This dataset contains selected breweries in Franconia. It is a subset of a larger database that was
-compiled by students at the University of Marburg for a seminar called "The Geography of Beer,
-sustainability in the food industry"
-colorNumeric 25
+
+
 colorNumeric Color mapping
 Description
 Conveniently maps data values (numeric or factor/character) to colors according to a given palette,
@@ -124,6 +97,7 @@ A function that takes a single parameter x; when called with a vector of numbers
 colorFactor, which expects factors/characters), #RRGGBB color strings are returned (unless
 alpha = TRUE in which case #RRGGBBAA may also be possible).
 ### Examples
+```{r}
 pal <- colorBin("Greens", domain = 0:100)
 pal(runif(10, 60, 100))
 # Exponential distribution, mapped continuously
@@ -139,3 +113,4 @@ previewColors(colorFactor("RdYlBu", domain = NULL), LETTERS[1:5])
 previewColors(colorFactor("RdYlBu", domain = NULL), factor(LETTERS[1:5], levels = LETTERS))
 # ...or the domain is stated explicitly.
 previewColors(colorFactor("RdYlBu", levels = LETTERS), LETTERS[1:5])
+```

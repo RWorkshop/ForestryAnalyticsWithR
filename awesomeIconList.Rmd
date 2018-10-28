@@ -1,0 +1,31 @@
+---
+title: "awesomeIconList"
+author: "Kevin O'Brien"
+date: "28 October 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+awesomeIconList Make awesome-icon set
+
+
+### Usage
+<pre><code>
+awesomeIconList(...)
+</code></pre>
+
+
+### Arguments
+... icons created from makeAwesomeIcon()
+### Examples
+
+```{r}
+iconSet <- awesomeIconList(
+home = makeAwesomeIcon(icon = "Home", library = "fa"),
+flag = makeAwesomeIcon(icon = "Flag", library = "fa")
+)
+````
