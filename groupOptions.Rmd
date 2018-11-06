@@ -7,8 +7,9 @@ group will be displayed at. The zoomLevels option is not compatible with layers 
 both assign a group to zoom levels and use it with addLayersControl.
 
 #### Usage
-
+<pre><code>
 groupOptions(map, group, zoomLevels = NULL)
+<code></pre>
 
 #### Arguments
 * map the map to modify
@@ -22,6 +23,7 @@ leaflet() %>%
 # Basic markers
 addTiles(group = "basic") %>%
 addMarkers(data = quakes, group = "basic") %>%
+
 # When zoomed in, we'll show circles at the base of each marker whose
 # radius and color reflect the magnitude
 addProviderTiles(providers$Stamen.TonerLite, group = "detail") %>%
