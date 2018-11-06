@@ -7,6 +7,7 @@ derived from the palette function. You can also manually specify the colors and 
 the legend.
 
 #### Usage
+<pre><code>
 addLegend(map, position = c("topright", "bottomright", "bottomleft",
 "topleft"), pal, values, na.label = "NA", bins = 7, colors,
 opacity = 0.5, labels = NULL, labFormat = labelFormat(),
@@ -14,40 +15,30 @@ title = NULL, className = "info legend", layerId = NULL,
 group = NULL, data = getMapData(map))
 labelFormat(prefix = "", suffix = "", between = " &ndash; ",
 digits = 3, big.mark = ",", transform = identity)
-addLegend 11
+</code></pre>
+
 #### Arguments
-* map a map widget object created from leaflet()
-position the position of the legend
+* map a map widget object created from leaflet() position the position of the legend
 * pal the color palette function, generated from colorNumeric(), colorBin(), colorQuantile(),
 or colorFactor()
 * values the values used to generate colors from the palette function
 * na.label the legend label for NAs in values
-* bins an approximate number of tick-marks on the color gradient for the colorNumeric
-palette if it is of length one; you can also provide a numeric vector as the predefined
-breaks (equally spaced)
+* bins an approximate number of tick-marks on the color gradient for the colorNumeric palette if it is of length one; you can also provide a numeric vector as the predefined breaks (equally spaced)
 * colors a vector of (HTML) colors to be used in the legend if pal is not provided
 opacity the opacity of colors
-* labels a vector of text labels in the legend corresponding to colors
-labFormat a function to format the labels derived from pal and values (see Details below
-to know what labelFormat() returns by default; you can either use the helper
-function labelFormat(), or write your own function)
-title the legend title
+* labels a vector of text labels in the legend corresponding to colors labFormat a function to format the labels derived from pal and values (see Details below to know what labelFormat() returns by default; you can either use the helper
+function labelFormat(), or write your own function) title the legend title
 * className extra CSS classes to append to the control, space separated
-* layerId the ID of the legend; subsequent calls to addLegend or addControl with the
-same layerId will replace this legend. The ID can also be used with removeControl.
-group group name of a leaflet layer group. Supplying this value will tie the legend to
-the leaflet layer group with this name and will auto add/remove the legend as
-the group is added/removed, for example via layerControl. You will need to set
-the group when you add a layer (e.g. addPolygons) and supply the same name
-here.
-data the data object from which the argument values are derived; by default, it is the
-data object provided to leaflet() initially, but can be overridden
-* prefix a prefix of legend labels
-* suffix a suffix of legend labels
-between a separator between x[i] and x[i + 1] in legend labels (by default, it is a dash)
-digits the number of digits of numeric values in labels
-* big.mark the thousand separator
-* transform a function to transform the label value
+* layerId the ID of the legend; subsequent calls to addLegend or addControl with the same layerId will replace this legend. The ID can also be used with removeControl.
+* group group name of a leaflet layer group. Supplying this value will tie the legend to the leaflet layer group with this name and will auto add/remove the legend as the group is added/removed, for example via layerControl. You will need to set
+the group when you add a layer (e.g. addPolygons) and supply the same name here.
+* data the data object from which the argument values are derived; by default, it is the data object provided to leaflet() initially, but can be overridden
+* prefix : a prefix of legend labels
+* suffix : a suffix of legend labels
+* between a separator between x[i] and x[i + 1] in legend labels (by default, it is a dash)
+* digits : the number of digits of numeric values in labels
+* big.mark : the thousand separator
+* transform :  a function to transform the label value
 
 #### Details
 
