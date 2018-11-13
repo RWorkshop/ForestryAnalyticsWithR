@@ -1,33 +1,19 @@
-evalFormula Evaluate list members that are formulae, using the map data as the
-environment (if provided, otherwise the formula environment)
-Description
+##evalFormula 
+
+Evaluate list members that are formulae, using the map data as the environment (if provided, otherwise the formula environment)
+
+### Description
 Evaluate list members that are formulae, using the map data as the environment (if provided, otherwise
 the formula environment)
+
 ### Usage
+<pre><code>
 evalFormula(list, data)
+</code></pre>
+
 ### Arguments
-list with members as formulae
-data map data
-expandLimits Notifies the map of new latitude/longitude of items of interest on the
-map
-Description
-Notifies the map of new latitude/longitude of items of interest on the map
-### Usage
-expandLimits(map, lat, lng)
-### Arguments
-map map object
-lat vector of latitudes
-lng vector of longitudes
-32 filterNULL
-expandLimitsBbox Same as expandLimits, but takes a polygon (that presumably has a
-bbox attr) rather than lat/lng.
-Description
-Same as expandLimits, but takes a polygon (that presumably has a bbox attr) rather than lat/lng.
-### Usage
-expandLimitsBbox(map, poly)
-### Arguments
-map map object
-poly A spatial object representing a polygon.
+* list with members as formulae
+* data map data
 
 
 
