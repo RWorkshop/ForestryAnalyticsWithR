@@ -1,12 +1,11 @@
 ---
-title: "validateCoords Utility function to check if a coordinates is valid"
-author: "Kevin O'Brien"
-date: "28 October 2018"
+title: "``validateCoords`` Utility function to check if a coordinates is valid"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
 ```
 
 
