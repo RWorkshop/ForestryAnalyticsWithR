@@ -1,3 +1,13 @@
+---
+title: "``previewColors``: Color previewing utility"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
 leafletSizingPolicy Leaflet sizing policy
 Description
 Sizing policy used withing leaflet htmlwidgets. All ### Arguments are passed directly to htmlwidgets::sizingPolicy

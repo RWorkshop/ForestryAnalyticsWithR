@@ -1,6 +1,15 @@
+---
+title: "``easyButtonState``: Create an easyButton statestate"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
 
 easyButtonState Create an easyButton statestate
-Description
+#### Description
 Create an easyButton statestate
 Creates an easy button.
 Add a EasyButton on the map see https://github.com/CliffCloud/Leaflet.EasyButton

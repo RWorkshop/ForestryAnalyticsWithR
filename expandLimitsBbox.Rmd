@@ -1,3 +1,15 @@
+---
+title: "``expandLimitsBbox``"
+author: "Kevin O'Brien"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+
 ## ``expandLimitsBbox`` 
 Same as expandLimits, but takes a polygon (that presumably has a bbox attr) rather than lat/lng.
 

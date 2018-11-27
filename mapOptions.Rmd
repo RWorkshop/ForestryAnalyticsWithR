@@ -1,3 +1,13 @@
+---
+title: "``previewColors``: Color previewing utility"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
 
 ## ``mapOptions``: Set options on a leaflet map object
 

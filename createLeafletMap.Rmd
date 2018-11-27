@@ -1,12 +1,11 @@
 ---
 title: "``createLeafletMap`` Legacy functions"
-author: "Kevin O'Brien"
-date: "28 October 2018"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
 ```
 
 #### Description
@@ -26,7 +25,5 @@ leafletMap(outputId, width, height,
 
 #### Arguments
 
-session, outputId
-Deprecated
-width, height, initialTileLayer, initialTileLayerAttribution, options
-Deprecated
+* session, outputId Deprecated
+* width, height, initialTileLayer, initialTileLayerAttribution, options Deprecated

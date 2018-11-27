@@ -1,4 +1,15 @@
-ablakey/Leaflet.SimpleGraticule
+---
+title: "``ablakey/Leaflet.SimpleGraticule``"
+author: "Kevin O'Brien"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+
 
 ### Description
 
@@ -24,6 +35,8 @@ layerId = NULL, group = NULL)
 * group the name of the group this layer belongs to.
 
 ### Examples
+```{r}
 leaflet() %>%
 addTiles() %>%
 addSimpleGraticule()
+```
