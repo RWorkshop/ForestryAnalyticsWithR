@@ -8,12 +8,13 @@ knitr::opts_chunk$set(echo = TRUE)
 library(leaflet)
 ```
 
-
-Description
+#### Description
 Color previewing utility
-### Usage
+#### Usage
+<pe><code>
 previewColors(pal, values)
-### Arguments
-pal A color mapping function, like those returned from colorNumeric, et al
-values A set of values to preview colors for
-Value An HTML-based list of the colors and values
+</code></pre>
+
+#### Arguments
+* pal A color mapping function, like those returned from colorNumeric, et al
+* values A set of values to preview colors for value An HTML-based list of the colors and values
