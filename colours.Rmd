@@ -10,11 +10,12 @@ library(leaflet)
 
 #### Description
 Color previewing utility
+
 #### Usage
-<pe><code>
+<pre><code>
 previewColors(pal, values)
 </code></pre>
 
 #### Arguments
-* pal A color mapping function, like those returned from colorNumeric, et al
-* values A set of values to preview colors for value An HTML-based list of the colors and values
+* ``pal``: A color mapping function, like those returned from colorNumeric, et al
+* ``values``: A set of values to preview colors for value An HTML-based list of the colors and values
