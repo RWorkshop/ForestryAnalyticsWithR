@@ -1,7 +1,5 @@
 ---
 title: "awesomeIconList"
-author: "Kevin O'Brien"
-date: "28 October 2018"
 output: html_document
 ---
 
@@ -9,8 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 library(leaflet)
 ```
-
-awesomeIconList Make awesome-icon set
+Make awesome-icon set
 
 
 ### Usage
@@ -20,7 +17,8 @@ awesomeIconList(...)
 
 
 ### Arguments
-... icons created from makeAwesomeIcon()
+* ``...``: icons created from ``makeAwesomeIcon()``
+
 ### Examples
 
 ```{r}
