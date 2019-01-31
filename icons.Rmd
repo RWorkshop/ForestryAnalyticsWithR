@@ -1,7 +1,5 @@
 ---
-title: "leaflet icons"
-author: "Kevin O'Brien"
-date: "28 October 2018"
+title: "``leaflet::icons``"
 output: html_document
 ---
 
@@ -10,11 +8,10 @@ knitr::opts_chunk$set(echo = TRUE)
 library(leaflet)
 ```
 
-icons Create a list of icon data
-Description
-An icon can be represented as a list of the form list(iconUrl,iconSize, ...). This function is
-vectorized over its arguments to create a list of icon data. Shorter argument values will be re-cycled.
-NULL values for these arguments will be ignored.
+## ``icons`` Create a list of icon data
+
+#### Description
+An icon can be represented as a list of the form list(iconUrl,iconSize, ...). This function is vectorized over its arguments to create a list of icon data. Shorter argument values will be re-cycled. NULL values for these arguments will be ignored.
 
 ### Usage
 
@@ -29,26 +26,17 @@ popupAnchorX = NULL, popupAnchorY = NULL, className = NULL)
 
 #### Arguments
 
-* iconUrl the URL or file path to the icon image
-* iconRetinaUrl the URL or file path to a retina sized version of the icon image
-* iconWidth, iconHeight
-size of the icon image in pixels
-* iconAnchorX, iconAnchorY
-the coordinates of the "tip" of the icon (relative to its top left corner, i.e. the top
-left corner means iconAnchorX = 0 and iconAnchorY = 0), and the icon will
-be aligned so that this point is at the marker’s geographical location
-* shadowUrl the URL or file path to the icon shadow image
-shadowRetinaUrl
-the URL or file path to the retina sized version of the icon shadow image
-shadowWidth, shadowHeight
-size of the shadow image in pixels
-
-shadowAnchorX, shadowAnchorY
-the coordinates of the "tip" of the shadow
-popupAnchorX, popupAnchorY
-the coordinates of the point from which popups will "open", relative to the icon
-anchor
-className a custom class name to assign to both icon and shadow images
+* ``iconUrl``: the URL or file path to the icon image
+* ``iconRetinaUrl``: the URL or file path to a retina sized version of the icon image
+* ``iconWidth``, ``iconHeight`` : size of the icon image in pixels
+* ``iconAnchorX``, ``iconAnchorY`` : the coordinates of the "tip" of the icon (relative to its top left corner, i.e. the top
+left corner means ``iconAnchorX = 0`` and ``iconAnchorY = 0``), and the icon will be aligned so that this point is at the marker’s geographical location
+* ``shadowUrl``: the URL or file path to the icon shadow image
+* ``shadowRetinaUrl``: the URL or file path to the retina sized version of the icon shadow image
+* ``shadowWidth``, ``shadowHeight``: size of the shadow image in pixels
+* ``shadowAnchorX``, ``shadowAnchorY``: the coordinates of the "tip" of the shadow
+* ``popupAnchorX``, ``popupAnchorY``: the coordinates of the point from which popups will "open", relative to the icon anchor
+* ``className``: a custom class name to assign to both icon and shadow images
 
 ### Value
 A list of icon data that can be passed to the icon argument of addMarkers().
