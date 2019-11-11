@@ -1,4 +1,13 @@
-## getMapData returns the map’s data
+---
+title: "``leaflet::getMapData``"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
 
 #### Description
 returns the map’s data
@@ -9,4 +18,4 @@ getMapData(map)
 </code></pre>
 
 #### Arguments
-* map the map
+* ``map``: the map
