@@ -1,12 +1,16 @@
-## ``groupOptions``: Set options on layer groups
+---
+title: "``leaflet::groupOptions ``"
+output: html_document
+---
 
-
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
 
 #### Description
 
-Change options on layer groups. Currently the only option is to control what zoom levels a layer group will be displayed at. The zoomLevels option is not compatible with layers control; do not both assign a group to zoom levels and use it with addLayersControl.
-
-
+Change options on layer groups. Currently the only option is to control what zoom levels a layer group will be displayed at. The zoomLevels option is not compatible with layers control; do not both assign a group to zoom levels and use it with ``addLayersControl``.
 
 #### Usage
 
@@ -31,29 +35,15 @@ groupOptions(map, group, zoomLevels = NULL)
 pal <- colorQuantile("YlOrRd", quakes$mag)
 
 leaflet() %>%
-
-# Basic markers
-
-addTiles(group = "basic") %>%
-
-addMarkers(data = quakes, group = "basic") %>%
+  addTiles(group = "basic") %>%    # Basic markers
+  addMarkers(data = quakes, group = "basic") %>%
+  addProviderTiles(providers$Stamen.TonerLite, group = "detail") %>%
+  addCircleMarkers(data = quakes, group = "detail", fillOpacity = 0.5,
+                   radius = ~mag * 5, color = ~pal(mag), stroke = FALSE) %>%
+  groupOptions("detail", zoomLevels = 7:18)
 ```
 
-```{r}
-# When zoomed in, we'll show circles at the base of each marker whose
+When zoomed in, we'll show circles at the base of each marker whose radius and color reflect the magnitude
+Also, we set the detail group to only appear when zoomed in
 
-# radius and color reflect the magnitude
 
-addProviderTiles(providers$Stamen.TonerLite, group = "detail") %>%
-
-addCircleMarkers(data = quakes, group = "detail", fillOpacity = 0.5,
-
-radius = ~mag * 5, color = ~pal(mag), stroke = FALSE) %>%
-```
-
-```{r}
-# Set the detail group to only appear when zoomed in
-
-groupOptions("detail", zoomLevels = 7:18)
-
-```
