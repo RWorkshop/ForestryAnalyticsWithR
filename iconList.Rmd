@@ -1,14 +1,35 @@
+---
+title: "``leaflet::iconList``"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+
+
 iconList Make icon set
-Description
+
+### Description
 Make icon set
+
 ### Usage
+<pre><code>
 iconList(...)
-icons 35
+</code></pre>
+
 ### Arguments
-... icons created from makeIcon()
+
+* ``...``: icons created from ``makeIcon()``
+
 ### Examples
+
+```{r}
 iconSet <- iconList(
 red = makeIcon("leaf-red.png", iconWidth = 32, iconHeight = 32),
 green = makeIcon("leaf-green.png", iconWidth = 32, iconHeight = 32)
 )
 iconSet[c("red", "green", "red")]
+```
